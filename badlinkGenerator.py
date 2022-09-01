@@ -1,6 +1,9 @@
 #the x eye made by prs
-#how to jenere]
-def banner(token):
+#how to generate?
+#first step : Type 2 on first menu
+#second step : select your java script file in -->current path<-- for inject in link
+#third step : go to badlink.txt in current path and copy your bad link
+def banner(token): 
     if token == "print":
         import subprocess
         subprocess.getoutput("cls")
