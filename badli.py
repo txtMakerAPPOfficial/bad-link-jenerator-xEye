@@ -1,5 +1,4 @@
 #the x eye made by prs
-#help!!!
 
 def banner(token):
     if token == "print":
