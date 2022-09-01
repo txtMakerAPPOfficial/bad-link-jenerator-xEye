@@ -1,5 +1,5 @@
 #the x eye made by prs
-
+#how to jenere]
 def banner(token):
     if token == "print":
         import subprocess
