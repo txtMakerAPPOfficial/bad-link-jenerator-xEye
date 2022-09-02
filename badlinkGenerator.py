@@ -1,11 +1,5 @@
-#the x eye made by prs
-#|||help|||
-#how to generate?
-#first step : Type 2 on first menu
-#second step : select your java script file in -->current path<-- for inject in link
-#third step : go to badlink.txt in current path and copy your bad link
-#^^^help^^^
-def banner(token): 
+from time import sleep
+def banner(token):
     if token == "print":
         import subprocess
         subprocess.getoutput("cls")
@@ -19,6 +13,11 @@ def banner(token):
                                      
 '''
         print(bann)
+        print("------ v1.5")
+        print("------ new update!")
+        print("------ added behaviours : Domain selection section")
+    if token == "sls":
+        sleep(3)
     if token == "exit":
         import sys
         sys.exit()
@@ -46,6 +45,57 @@ def banner(token):
             banner("print")
             banner("showmenu")
             banner("command")
+        
+        if get == 4:
+            banner("cls")
+            print("[!] select your domain\n")
+            print("[1] .com")
+            print("[2] .net")
+            print("[3] .ir")
+            print("[4] .org")
+            print("[5] .edu")
+            print("[6] .biz")
+            try:
+                ssts = int(input("┌─["+"X eye"+"--"+"domain"+"""]
+└──╼ """+"Your Select> "))
+            except:
+                print("[-] select error")
+                print("[1] Back To Menu\n")
+                jss = input("┌─["+"X eye"+"--"+"Error"+"""]
+└──╼ """+"Press Enter to Back>> ")
+                banner("cls")
+                banner("print")
+                banner("showmenu")
+                banner("command")
+            if ssts == 1:
+                dom = input("https://")
+                import requests
+                try:
+                    requests.post("https://domains.gov.ir:/setnew/dom?="+dom+".com")
+                    class chos():
+                        def js():
+                            a = dom.split()
+                            h = a[1]
+                    py = chos()
+                    py.js()
+                except:
+                    banner("sls")
+                    print("[+] https://"+dom+".com Is Now Your Bad Link Domain")
+                    bk = input("┌─["+"X eye"+"--"+"Info"+"""]
+└──╼ """+"Press Enter Tto Continue >> ")
+                    banner("cls")
+                    banner("print")
+                    banner("showmenu")
+                    banner("command")
+            else:
+                print("[!] Wait For New Version For Add This Domain")
+                bk = input("┌─["+"X eye"+"--"+"Info"+"""]
+└──╼ """+"Press Enter Tto Continue >> ")
+                banner("cls")
+                banner("print")
+                banner("showmenu")
+                banner("command")
+
         if get == 1:
             import os
             banner("cls")
@@ -63,7 +113,7 @@ def banner(token):
                 sys.exit()
             except:
                 try:
-                    os.system("s")
+                    os.system("ipconfig")
                 except:
                     print("[-] Exit error")
                     def showThisMessageAndEndProgress():
@@ -79,7 +129,7 @@ def banner(token):
                                                 def exe(exitnone):
                                                     if self.exitnone:
                                                         exe(self)
-                                                        os
+                                                        os.system("cls")
                                         
                                     except:
                                         pass
@@ -142,6 +192,7 @@ def banner(token):
         print("\n[1] info")
         print("[2] make bad link")
         print("[3] Exit")
+        print("[4] change domain")
     if token == "clear":
         os.system("cls")
 #set token
